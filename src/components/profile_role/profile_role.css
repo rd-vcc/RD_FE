@@ -1,0 +1,253 @@
+.profile-container {
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.back-btn {
+  padding: 8px 16px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px; 
+  cursor: pointer;
+}
+
+/* Toolbar - Các nút sát nhau */
+.toollbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.btn {
+  padding: 4px 14px;
+  font-size: 13px;
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.88);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:hover:not(:disabled) {
+  background: #4096ff;
+  border-color: #4096ff;
+  color: #fff;
+}
+
+/* Disabled */
+.btn:disabled {
+  background: #f5f5f5;
+  border-color: #d9d9d9;
+  color: rgba(0, 0, 0, 0.25);
+  cursor: not-allowed;
+}
+.add-btn,
+.edit-btn:not(:disabled),
+.delete-btn:not(:disabled) {
+  background: #1677ff;
+  border-color: #1677ff;
+  color: #fff;
+}
+
+/* Hover khi active */
+.add-btn:hover:not(:disabled),
+.edit-btn:hover:not(:disabled),
+.delete-btn:hover:not(:disabled) {
+  background: #4096ff;
+  border-color: #4096ff;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  width: 600px;
+  border-radius: 8px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-content {
+  padding: 16px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  text-transform: none !important;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.password-input {
+  position: relative;
+}
+.form-error {
+  color: #ff4d4f;
+  margin-bottom: 15px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  padding: 19px;
+  border-top: 1px solid #eee;
+}
+
+
+.error-message {
+  background: #fff2f0;
+  color: #ff4d4f;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+}
+/* icon password */
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+}
+
+.toggle-password:hover {
+  color: #1677ff;
+}
+/* ===== MODAL LABEL STYLE ===== */
+.modal .form-group label {
+  font-weight: normal;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.85);
+}
+.modal .form-group label::after {
+  content: '';
+}
+.modal .form-group label span,
+.modal .form-group label em,
+.modal .form-group label strong {
+  color: #ff4d4f;
+}
+
+.modal .form-group .required {
+  color: #ff4d4f;
+  margin-left: 2px;
+}
+
+.modal .form-group label::after {
+  content: attr(data-required);
+  color: #ff4d4f;
+}
+.success-message {
+  background: #e6fffa;
+  color: #047857;
+  border: 1px solid #34d399;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin: 10px 0;
+  font-size: 14px;
+}
+/* ===== CHỈ CHỈNH CHỮ HEADER ===== */
+.ag-theme-alpine .ag-header-cell-text {
+  font-size: 0.9rem;   
+  font-weight: 600;
+}
+.ag-theme-alpine .ag-cell {
+  font-size: 0.8rem;
+
+}
+/* ===== ICON BUTTON (MODAL ACTIONS) ===== */
+.icon-btn {
+  height: 36px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 6px;
+  min-width: 70px; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;               
+  cursor: pointer;
+  background: #f5f5f5;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;         
+
+  transition: all 0.2s ease;
+}
+
+
+.icon-btn svg {
+  font-size: 16px;
+}
+
+.icon-btn.cancel {
+  color: #d32f2f;
+}
+
+.icon-btn.save {
+  color: #1976d2;
+}
+
+.icon-btn:hover:not(:disabled) {
+  background: #e0e0e0;
+}
+
+.icon-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
